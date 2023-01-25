@@ -1,0 +1,13 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* 1. Too Skinny, too much code */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+  /* 2. Cleaner Code */
+  grid-template-columns: repeat(12, 1fr);
+
+  /* 3. Better sizing , but overflows */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
